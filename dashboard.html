@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Resultados</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dashboard de Resultados</h1>
+            <p>Visualización de resultados individuales y grupales</p>
+        </header>
+        
+        <div class="user-info">
+            <h2 id="usuarioActual"></h2>
+            <div>
+                <a href="index.html" class="btn">Volver al Inicio</a>
+                <button id="backupBtn" class="btn">Respaldar Datos</button>
+            </div>
+        </div>
+        
+        <div class="dashboard">
+            <div class="chart-container">
+                <h3>Progreso Individual por Tema</h3>
+                <div id="individualChart" class="chart">
+                    <!-- Gráfico individual se cargará aquí -->
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Promedio Grupal por Tema</h3>
+                <div id="groupChart" class="chart">
+                    <!-- Gráfico grupal se cargará aquí -->
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3>Comparativa Individual vs Grupal</h3>
+                <div id="comparisonChart" class="chart">
+                    <!-- Gráfico comparativo se cargará aquí -->
+                </div>
+            </div>
+            
+            <div class="chart-container full-width">
+                <h3>Detalle de Evaluaciones por Tema</h3>
+                <div id="evaluationsTable">
+                    <!-- Tabla de evaluaciones se cargará aquí -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth-system.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/backup.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

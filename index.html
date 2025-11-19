@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Autoevaluación</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Autodiagnóstico</h1>
+            <p>Evalúa tu dominio en 10 temas específicos</p>
+        </header>
+        
+        <!-- Sección Login -->
+        <div class="login-section" id="loginSection">
+            <h2>Iniciar Sesión</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Contraseña:</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit">Ingresar</button>
+            </form>
+            <div class="auth-links">
+                <p>¿No tienes cuenta? <a href="#" id="showRegister">Regístrate aquí</a></p>
+            </div>
+        </div>
+        
+        <!-- Sección Registro -->
+        <div class="register-section hidden" id="registerSection">
+            <h2>Registro de Usuario</h2>
+            <form id="registerForm">
+                <div class="form-group">
+                    <label for="regName">Nombre Completo:</label>
+                    <input type="text" id="regName" required>
+                </div>
+                <div class="form-group">
+                    <label for="regEmail">Correo Electrónico:</label>
+                    <input type="email" id="regEmail" required>
+                </div>
+                <div class="form-group">
+                    <label for="regPassword">Contraseña:</label>
+                    <input type="password" id="regPassword" required minlength="6">
+                </div>
+                <div class="form-group">
+                    <label for="regUserId">ID de Usuario:</label>
+                    <input type="text" id="regUserId" required>
+                </div>
+                <button type="submit">Registrarse</button>
+            </form>
+            <div class="auth-links">
+                <p>¿Ya tienes cuenta? <a href="#" id="showLogin">Inicia sesión aquí</a></p>
+            </div>
+        </div>
+        
+        <!-- Contenido Principal -->
+        <div class="main-content hidden" id="mainContent">
+            <div class="user-info">
+                <h2>Bienvenido, <span id="userName"></span></h2>
+                <div>
+                    <button id="backupBtn" class="btn">Respaldar Datos</button>
+                    <button id="logoutBtn" class="btn">Cerrar Sesión</button>
+                </div>
+            </div>
+            
+            <div class="topics-grid">
+                <h3>Temas Disponibles</h3>
+                <div class="grid" id="topicsGrid">
+                    <!-- Los temas se cargarán dinámicamente -->
+                </div>
+            </div>
+            
+            <div class="dashboard-link">
+                <a href="dashboard.html" class="btn">Ver Dashboard</a>
+            </div>
+
+            <!-- Sección Admin (solo visible para usuarios específicos) -->
+            <div class="admin-section hidden" id="adminSection">
+                <h3>Administración</h3>
+                <div class="admin-actions">
+                    <input type="file" id="importFile" accept=".json" class="hidden">
+                    <button id="importBtn" class="btn">Importar Datos</button>
+                    <button id="exportBtn" class="btn">Exportar Datos</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/auth-system.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/backup.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

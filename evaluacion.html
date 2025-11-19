@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluación</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Evaluación</h1>
+            <p id="temaNombre"></p>
+        </header>
+        
+        <div class="user-info">
+            <h2 id="usuarioActual"></h2>
+            <div>
+                <a href="index.html" class="btn">Volver al Inicio</a>
+                <a href="dashboard.html" class="btn">Ver Dashboard</a>
+            </div>
+        </div>
+        
+        <div class="evaluation-container">
+            <form id="evaluationForm">
+                <div id="questionsContainer">
+                    <!-- Las preguntas se cargarán dinámicamente -->
+                </div>
+                
+                <div class="text-center mt-20">
+                    <button type="submit" class="btn">Enviar Evaluación</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/auth-system.js"></script>
+    <script src="js/database.js"></script>
+    <script src="js/evaluacion.js"></script>
+</body>
+</html>
